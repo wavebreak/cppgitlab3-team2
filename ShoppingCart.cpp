@@ -28,7 +28,16 @@ cartItems.push_back(item);
 }
 
 void ShoppingCart::RemoveItem(string name) {
+int CartSize = cartItems.size();
 
+for(int i = 0; i < cartItems.size(); i++) {
+if (cartItems.at(i).GetName() == item){
+cartItems.erase(cartItems.begin() + i);
+}
+if(CartSize == cartItems.size()){
+  cout<<"There are no items in the cart."<<endl;
+}
+}
 }
 
 void ShoppingCart::ModifyItem(ItemToPurchase item) {
