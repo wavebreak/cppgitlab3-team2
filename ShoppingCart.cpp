@@ -24,7 +24,7 @@ string ShoppingCart::GetDate() const {
 
 
 void ShoppingCart::AddItem(ItemToPurchase item) {
-cartItems.add(item);
+cartItems.push_back(item);
 }
 
 void ShoppingCart::RemoveItem(string name) {
