@@ -59,8 +59,7 @@ void ShoppingCart::ModifyItem(ItemToPurchase item) {
                     item.SetQuantity(item.GetQuantity());
             }
         }
-
-        //If the value of the variable found is not true,
+        
         if (!found)
         {
             cout << "Item not found in cart. ";
