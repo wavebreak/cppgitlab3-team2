@@ -38,7 +38,7 @@ void ShoppingCart::ModifyItem(ItemToPurchase item) {
         for (auto & cartItem : cartItems) {
             if (cartItem.GetName() == item.GetName()) {
                 found = true;
-                ItemToPurchase &itemToPurchase = cartItem;
+                ItemToPurchase &item = cartItem;
                 if (item.GetDescription() != "none")
                     item.SetDescription(item.
                             GetDescription());
