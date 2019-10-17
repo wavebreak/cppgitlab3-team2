@@ -30,6 +30,7 @@ char PrintMenu(ShoppingCart& theCart){
    switch(menuOp) {
       case 'a':
       {
+          //add item to cart
          cin.ignore();
          
          cout << "ADD ITEM TO CART" << endl;
@@ -54,20 +55,23 @@ char PrintMenu(ShoppingCart& theCart){
       break;
       
       case 'd':
-         cin.ignore();
-         
-         cout << "REMOVE ITEM FROM CART" << endl;
-         cout << "Enter name of item to remove:" << endl;
-         getline(cin, name);
-         
-         theCart.RemoveItem(name);
-         
-         menuOp = ' ';
-         cout << endl;
+          //remove an item
+          cin.ignore();
+
+          cout << "REMOVE ITEM FROM CART" << endl;
+          cout << "Enter name of item to remove:" << endl;
+          getline(cin, name);
+
+          theCart.RemoveItem(name);
+
+          menuOp = ' ';
+          cout << endl;
+
       break;
       
       case 'c':
       {
+          //change item quantity
          cin.ignore();
          
          cout << "CHANGE ITEM QUANTITY" << endl;
@@ -89,6 +93,7 @@ char PrintMenu(ShoppingCart& theCart){
       break;
       
       case 'i':
+          //output item's description
          cout << "OUTPUT ITEMS' DESCRIPTIONS" << endl;
          theCart.PrintDescriptions();
          
@@ -97,6 +102,7 @@ char PrintMenu(ShoppingCart& theCart){
       break;
       
       case 'o':
+          //output shopping cart
          cout << "OUTPUT SHOPPING CART" << endl; 
          theCart.PrintTotal();
          

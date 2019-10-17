@@ -36,10 +36,17 @@ void ShoppingCart::ModifyItem(ItemToPurchase item) {
 }
 
 int ShoppingCart::GetNumItemsInCart() {
+    int size = 0;
 
+    for (int i = 0; i < cartItems.size(); ++i){
+         size += cartItems.at(i).GetQuantity();
+    }
+
+    return size;
 }
 
 double ShoppingCart::GetCostOfCart() {
+
 
 }
 
