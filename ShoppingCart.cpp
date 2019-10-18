@@ -67,17 +67,14 @@ int ShoppingCart::GetNumItemsInCart() {
 }
 
 double ShoppingCart::GetCostOfCart() {
-    int totalCost = 0;
+    int sum = 0;
 
-    if(cartItems.size() > 0) {
-        for(unsigned i = 0; i < cartItems.size(); ++i) {
-            totalCost += cartItems.at(i).GetPrice();
-        }
+    for (unsigned int i = 0; i < cartItems.size(); ++i){
+        sum = sum + (cartItems.at(i).GetPrice()*cartItems.at(i).GetQuantity());
     }
-
-    return totalCost;
-
+    return sum;
 }
+
 
 void ShoppingCart::PrintTotal() {
     unsigned i;
