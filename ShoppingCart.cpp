@@ -67,7 +67,15 @@ int ShoppingCart::GetNumItemsInCart() {
 }
 
 double ShoppingCart::GetCostOfCart() {
+    int totalCost = 0;
 
+    if(cartItems.size() > 0) {
+        for(unsigned i = 0; i < cartItems.size(); ++i) {
+            totalCost += cartItems.at(i).GetPrice();
+        }
+    }
+
+    return totalCost;
 
 }
 
